@@ -115,7 +115,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Shortcut to edit this file
-nnoremap <leader>ev :vsplit $MYVIMRC
+nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
 " Remove trailing spaces
 nnoremap <leader>ss mz:%s/\s\+$//e<CR>`z
