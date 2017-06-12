@@ -114,6 +114,12 @@ noremap <Right> <Nop>
 nnoremap j gj
 nnoremap k gk
 
+" Change windows easily
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+
 " Shortcut to edit this file
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
