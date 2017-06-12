@@ -1,0 +1,8 @@
+bundle/*
+!bundle/Vundle.vim
+.VimballRecord
+netrwhist
+.netrwhist
+snippets/*
+syntax/*
+ftdetect/*
