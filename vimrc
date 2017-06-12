@@ -133,10 +133,10 @@ noremap <F7> mzgg=G`z
 noremap <C-n> :NERDTreeToggle<CR>
 
 " Maps to run Rspec easily
-nnoremap ,a :call RunAllSpecs()
-nnoremap ,l :call RunLastSpec()
-nnoremap ,; :call RunNearestSpec()
-nnoremap ,' :call RunCurrentSpecFile()
+nnoremap ,a :call RunAllSpecs()<CR>
+nnoremap ,l :call RunLastSpec()<CR>
+nnoremap ,; :call RunNearestSpec()<CR>
+nnoremap ,' :call RunCurrentSpecFile()<CR>
 
 " Integrate vim-rspec with vim-plumber. Comment this if you don't use
 " vim-plumber
