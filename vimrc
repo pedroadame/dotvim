@@ -141,3 +141,5 @@ nnoremap ,' :call RunCurrentSpecFile()<CR>
 " Integrate vim-rspec with vim-plumber. Comment this if you don't use
 " vim-plumber
 let g:rspec_command = "silent ! echo \"rspec {spec}\" > .plumber &"
+" Make NERDCommenter add a space after a comment character
+let g:NERDSpaceDelims = 1
