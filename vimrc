@@ -44,7 +44,7 @@ Plugin 'tpope/vim-endwise'
 " Make vim awesome to work on rails projects
 Plugin 'tpope/vim-rails'
 " Integrate vim with rspec and plumber
-Plugin 'pedroadame/vim-rspec'
+Plugin 'thoughtbot/vim-rspec'
 " Twig syntax highlighting
 Plugin 'evidens/vim-twig'
 " <leader>ww in a split and then in another and they will be swapped
@@ -132,14 +132,20 @@ noremap <F7> mzgg=G`z
 " Open a tree navigator of current dir
 noremap <C-n> :NERDTreeToggle<CR>
 
-" Maps to run Rspec easily
-nnoremap ,a :call RunAllSpecs()<CR>
-nnoremap ,l :call RunLastSpec()<CR>
-nnoremap ,; :call RunNearestSpec()<CR>
-nnoremap ,' :call RunCurrentSpecFile()<CR>
 
 " Integrate vim-rspec with vim-plumber. Comment this if you don't use
 " vim-plumber
 let g:rspec_command = "silent ! echo \"rspec {spec}\" > .plumber &"
+
+function! CallAndRedraw(function_name)
+  call function(a:function_name)()
+  redraw!
+endfunction
+
+" Maps to run Rspec easily
+nnoremap <leader>a :call CallAndRedraw("RunAllSpecs")<CR>
+nnoremap <leader>l :call CallAndRedraw("RunLastSpec")<CR>
+nnoremap <leader>; :call CallAndRedraw("RunNearestSpec")<CR>
+nnoremap <leader>' :call CallAndRedraw("RunCurrentSpecFile")<CR>
 " Make NERDCommenter add a space after a comment character
 let g:NERDSpaceDelims = 1
