@@ -98,6 +98,9 @@ set backspace=indent,eol,start
 set laststatus=2 "Make airline always visible
 let g:airline_powerline_fonts = 1 "Make it powerlineish
 
+" Easymotion highlight colors
+hi link EasyMotionTarget ErrorMsg
+hi link EasyMotionShade  Comment
 
 """"""""""""""""""""""
 "" Keyboard shortcuts
