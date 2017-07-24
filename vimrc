@@ -138,7 +138,7 @@ noremap <C-n> :NERDTreeToggle<CR>
 
 " Integrate vim-rspec with vim-plumber. Comment this if you don't use
 " vim-plumber
-let g:rspec_command = "silent ! echo \"rspec {spec}\" > .plumber &"
+let g:rspec_command = "silent ! echo \"bundle exec rspec {spec}\" > .plumber &"
 
 function! CallAndRedraw(function_name)
   call function(a:function_name)()
