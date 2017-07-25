@@ -113,6 +113,9 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+" Exit insert mode with jk
+inoremap jk <ESC>
+
 " Make vertical move through wrapped lines normal
 nnoremap j gj
 nnoremap k gk
@@ -122,6 +125,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
+
+" Resize windows easily
+noremap <F5> 10<C-w><
+noremap <F6> 10<C-w>>
 
 " Shortcut to edit this file
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
