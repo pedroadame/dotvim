@@ -102,6 +102,9 @@ let g:airline_powerline_fonts = 1 "Make it powerlineish
 hi link EasyMotionTarget ErrorMsg
 hi link EasyMotionShade  Comment
 
+" Make NERDCommenter add a space after a comment character
+let g:NERDSpaceDelims = 1
+
 """"""""""""""""""""""
 "" Keyboard shortcuts
 """"""""""""""""""""""
@@ -157,5 +160,3 @@ nnoremap <leader>a :call CallAndRedraw("RunAllSpecs")<CR>
 nnoremap <leader>l :call CallAndRedraw("RunLastSpec")<CR>
 nnoremap <leader>; :call CallAndRedraw("RunNearestSpec")<CR>
 nnoremap <leader>' :call CallAndRedraw("RunCurrentSpecFile")<CR>
-" Make NERDCommenter add a space after a comment character
-let g:NERDSpaceDelims = 1
