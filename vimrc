@@ -137,7 +137,7 @@ noremap <F6> 10<C-w>>
 nnoremap <leader>ev :vsplit $MYVIMRC<CR>
 
 " Remove trailing spaces
-nnoremap <leader>ss mz:%s/\s\+$//e<CR>`z
+nnoremap <leader>ss mz:%s/\s\+$//e<CR>`z:noh<CR>
 " Disable highlighted last search words
 nnoremap <leader><space> :noh<CR>
 " Reindent current file.
