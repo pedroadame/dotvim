@@ -56,7 +56,7 @@ call vundle#end()
 filetype plugin indent on
 """" Plugins end
 
-" Run matchit macro
+" Run matchit macro to make % match HTML tags
 runtime 'macros/matchit.vim'
 
 """"""""""""""""""
