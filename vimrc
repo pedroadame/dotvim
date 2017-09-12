@@ -160,3 +160,7 @@ nnoremap <leader>a :call CallAndRedraw("RunAllSpecs")<CR>
 nnoremap <leader>l :call CallAndRedraw("RunLastSpec")<CR>
 nnoremap <leader>; :call CallAndRedraw("RunNearestSpec")<CR>
 nnoremap <leader>' :call CallAndRedraw("RunCurrentSpecFile")<CR>
+
+" Autosave/load foldings
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview 
