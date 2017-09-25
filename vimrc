@@ -45,6 +45,8 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 " Make C-a and C-x work with dates
 Plugin 'tpope/vim-speeddating'
+" Let's repeat  vim-surround
+Plugin 'tpope/vim-repeat'
 " Integrate vim with rspec and plumber
 Plugin 'thoughtbot/vim-rspec'
 " Twig syntax highlighting
@@ -165,4 +167,4 @@ nnoremap <leader>' :call CallAndRedraw("RunCurrentSpecFile")<CR>
 
 " Autosave/load foldings
 autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview 
+autocmd BufWinEnter *.* silent loadview
