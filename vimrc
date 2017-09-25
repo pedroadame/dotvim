@@ -43,6 +43,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
 " Make vim awesome to work on rails projects
 Plugin 'tpope/vim-rails'
+" Make C-a and C-x work with dates
+Plugin 'tpope/vim-speeddating'
 " Integrate vim with rspec and plumber
 Plugin 'thoughtbot/vim-rspec'
 " Twig syntax highlighting
