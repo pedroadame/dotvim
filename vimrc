@@ -55,6 +55,8 @@ Plugin 'evidens/vim-twig'
 Plugin 'wesQ3/vim-windowswap'
 " Send commands to a script that reads .plumber fifo. Useful with tmux
 Plugin 'stefanoverna/vim-plumber'
+" Show devicons in NERDTree, vim-airline...
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()
 filetype plugin indent on
