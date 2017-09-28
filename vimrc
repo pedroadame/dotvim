@@ -60,6 +60,8 @@ Plugin 'ryanoasis/vim-devicons'
 " Show git status on the gutter
 Plugin 'airblade/vim-gitgutter'
 
+" Open zeal easily
+Plugin 'KabbAmine/zeavim.vim'
 call vundle#end()
 filetype plugin indent on
 """" Plugins end
