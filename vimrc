@@ -57,6 +57,8 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'stefanoverna/vim-plumber'
 " Show devicons in NERDTree, vim-airline...
 Plugin 'ryanoasis/vim-devicons'
+" Show git status on the gutter
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
