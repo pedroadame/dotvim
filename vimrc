@@ -47,14 +47,10 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-speeddating'
 " Let's repeat  vim-surround
 Plugin 'tpope/vim-repeat'
-" Integrate vim with rspec and plumber
-Plugin 'thoughtbot/vim-rspec'
 " Twig syntax highlighting
 Plugin 'evidens/vim-twig'
 " <leader>ww in a split and then in another and they will be swapped
 Plugin 'wesQ3/vim-windowswap'
-" Send commands to a script that reads .plumber fifo. Useful with tmux
-Plugin 'stefanoverna/vim-plumber'
 " Show devicons in NERDTree, vim-airline...
 Plugin 'ryanoasis/vim-devicons'
 " Show git status on the gutter
