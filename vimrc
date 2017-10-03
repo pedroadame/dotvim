@@ -59,7 +59,9 @@ Plugin 'stefanoverna/vim-plumber'
 Plugin 'ryanoasis/vim-devicons'
 " Show git status on the gutter
 Plugin 'airblade/vim-gitgutter'
-
+" Run Ruby tests on tmux pane
+Plugin 'benmills/vimux'
+Plugin 'jgdavey/vim-turbux'
 " Open zeal easily
 Plugin 'KabbAmine/zeavim.vim'
 call vundle#end()
@@ -155,21 +157,9 @@ noremap <F7> mzgg=G`z
 " Open a tree navigator of current dir
 noremap <C-n> :NERDTreeToggle<CR>
 
-
-" Integrate vim-rspec with vim-plumber. Comment this if you don't use
-" vim-plumber
-let g:rspec_command = "silent ! echo \"bundle exec rspec {spec}\" > .plumber &"
-
-function! CallAndRedraw(function_name)
-  call function(a:function_name)()
-  redraw!
-endfunction
-
-" Maps to run Rspec easily
-nnoremap <leader>a :call CallAndRedraw("RunAllSpecs")<CR>
-nnoremap <leader>l :call CallAndRedraw("RunLastSpec")<CR>
-nnoremap <leader>; :call CallAndRedraw("RunNearestSpec")<CR>
-nnoremap <leader>' :call CallAndRedraw("RunCurrentSpecFile")<CR>
+" Turbux configuration
+let g:turbux_command_prefix = 'docker-compose run tests bundle exec'
+nnoremap <leader>a :call VimuxRunCommand("docker-compose run tests bundle exec rspec")<CR>
 
 " Autosave/load foldings
 autocmd BufWinLeave *.* mkview
