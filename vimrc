@@ -58,6 +58,8 @@ Plugin 'airblade/vim-gitgutter'
 " Run Ruby tests on tmux pane
 Plugin 'benmills/vimux'
 Plugin 'jgdavey/vim-turbux'
+" Vue.js syntax
+Plugin 'posva/vim-vue'
 " Open zeal easily
 Plugin 'KabbAmine/zeavim.vim'
 call vundle#end()
