@@ -62,6 +62,8 @@ Plugin 'jgdavey/vim-turbux'
 Plugin 'posva/vim-vue'
 " Open zeal easily
 Plugin 'KabbAmine/zeavim.vim'
+" Useful mappings
+Plugin 'tpope/vim-unimpaired'
 call vundle#end()
 filetype plugin indent on
 """" Plugins end
