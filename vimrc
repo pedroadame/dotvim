@@ -87,6 +87,7 @@ runtime 'macros/matchit.vim'
 """"""""""""""""""
 " Visual
 syntax enable " Enable syntax
+let g:solarized_termcolors=16
 set background=dark
 colorscheme solarized "Solarized with dark background
 set cursorline "Crosshair: X
@@ -114,6 +115,9 @@ set autoread
 " Fix backspace
 set backspace=indent,eol,start
 
+" Stop swap files!
+set noswapfile
+
 """"""""""""""""""""""
 "" Plugins settings
 """"""""""""""""""""""
@@ -128,6 +132,14 @@ hi link EasyMotionShade  Comment
 " Make NERDCommenter add a space after a comment character
 let g:NERDSpaceDelims = 1
 
+" Vim syntastic
+let g:syntastic_always_populate_loc_list = 0
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_ruby_checkers=['rubocop']
+let g:syntastic_javascript_checkers=["eslint"]
+
+" Ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|client/node_modules\|.git'
 """"""""""""""""""""""
 "" Keyboard shortcuts
 """"""""""""""""""""""
@@ -169,9 +181,6 @@ noremap <F7> mzgg=G`z
 noremap <C-n> :NERDTreeToggle<CR>
 
 " Turbux configuration
-let g:turbux_command_prefix = 'docker-compose run tests bundle exec'
-nnoremap <leader>a :call VimuxRunCommand("docker-compose run tests bundle exec rspec")<CR>
+let g:turbux_command_prefix = 'bundle exec'
+nnoremap <leader>a :call VimuxRunCommand("bundle exec rspec")<CR>
 
-" Autosave/load foldings
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
