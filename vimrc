@@ -64,6 +64,17 @@ Plugin 'posva/vim-vue'
 Plugin 'KabbAmine/zeavim.vim'
 " Useful mappings
 Plugin 'tpope/vim-unimpaired'
+" Call external linters
+Plugin 'vim-syntastic/syntastic'
+" Pug syntax
+Plugin 'digitaltoad/vim-pug'
+" ES6 syntax
+Plugin 'isRuslan/vim-es6'
+" Save vim sessions
+Plugin 'tpope/vim-obsession'
+" Scratch window
+Plugin 'mtth/scratch.vim'
+
 call vundle#end()
 filetype plugin indent on
 """" Plugins end
