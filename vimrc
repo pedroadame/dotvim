@@ -17,8 +17,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 " Easy comment/uncomment with <leader>c<space>
 Plugin 'scrooloose/nerdcommenter'
-" View git modified/added/etc files in nerdtree
-Plugin 'Xuyuanp/nerdtree-git-plugin'
 " Navigate faster with <leader><leader>w and then hit highlighted letter
 Plugin 'easymotion/vim-easymotion'
 " CSS3 syntax
@@ -47,8 +45,6 @@ Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-speeddating'
 " Let's repeat  vim-surround
 Plugin 'tpope/vim-repeat'
-" Twig syntax highlighting
-Plugin 'evidens/vim-twig'
 " <leader>ww in a split and then in another and they will be swapped
 Plugin 'wesQ3/vim-windowswap'
 " Show devicons in NERDTree, vim-airline...
@@ -60,8 +56,6 @@ Plugin 'benmills/vimux'
 Plugin 'jgdavey/vim-turbux'
 " Vue.js syntax
 Plugin 'posva/vim-vue'
-" Open zeal easily
-Plugin 'KabbAmine/zeavim.vim'
 " Useful mappings
 Plugin 'tpope/vim-unimpaired'
 " Call external linters
@@ -72,8 +66,6 @@ Plugin 'digitaltoad/vim-pug'
 Plugin 'isRuslan/vim-es6'
 " Save vim sessions
 Plugin 'tpope/vim-obsession'
-" Scratch window
-Plugin 'mtth/scratch.vim'
 
 call vundle#end()
 filetype plugin indent on
