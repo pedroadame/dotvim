@@ -59,13 +59,15 @@ Plugin 'posva/vim-vue'
 " Useful mappings
 Plugin 'tpope/vim-unimpaired'
 " Call external linters
-Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 " Pug syntax
 Plugin 'digitaltoad/vim-pug'
 " ES6 syntax
 Plugin 'isRuslan/vim-es6'
 " Save vim sessions
 Plugin 'tpope/vim-obsession'
+" Faster fuzzy file finder - requires vim with python
+Plugin 'FelikZ/ctrlp-py-matcher'
 
 call vundle#end()
 filetype plugin indent on
@@ -86,7 +88,7 @@ set cursorline "Crosshair: X
 set cursorcolumn "Crosshair: Y
 set number "Line numbers
 set belloff=all "No bells
-set scrolloff=10 "Scroll 10 lines from top/bottom
+set scrolloff=10000 "Scroll file and not cursor if possibl
 
 " Seach settings
 set hlsearch "Highlight search
@@ -124,11 +126,13 @@ hi link EasyMotionShade  Comment
 " Make NERDCommenter add a space after a comment character
 let g:NERDSpaceDelims = 1
 
-" Vim syntastic
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_ruby_checkers=['rubocop']
-let g:syntastic_javascript_checkers=["eslint"]
+" Ale configuration
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'ruby': ['rubocop'],
+\}
+let g:airline#extensions#ale#enabled = 1
+let g:ale_lint_on_text_changed = 'never'
 
 " Ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|client/node_modules\|.git'
