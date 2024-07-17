@@ -12,15 +12,13 @@ call vundle#begin()
 " Make Vundle manage itself
 Plugin 'gmarik/Vundle.vim'
 " Fuzzy file finder. Hit ctrl-p and start typing filename
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 " Tree view navigator
 Plugin 'scrooloose/nerdtree'
 " Easy comment/uncomment with <leader>c<space>
 Plugin 'scrooloose/nerdcommenter'
 " Navigate faster with <leader><leader>w and then hit highlighted letter
 Plugin 'easymotion/vim-easymotion'
-" CSS3 syntax
-Plugin 'hail2u/vim-css3-syntax'
 " Status bar
 Plugin 'vim-airline/vim-airline'
 " Status bar themes
@@ -31,8 +29,6 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'altercation/vim-colors-solarized'
 " :Rename :Delete and other helpful functions
 Plugin 'tpope/vim-eunuch'
-" Slim syntax highlighting
-Plugin 'slim-template/vim-slim'
 " Integrate vim with git
 Plugin 'tpope/vim-fugitive'
 " Easy surrounding ()[]""'' handler
@@ -51,19 +47,8 @@ Plugin 'wesQ3/vim-windowswap'
 Plugin 'ryanoasis/vim-devicons'
 " Show git status on the gutter
 Plugin 'airblade/vim-gitgutter'
-" Run Ruby tests on tmux pane
-Plugin 'benmills/vimux'
-Plugin 'jgdavey/vim-turbux'
-" Vue.js syntax
-Plugin 'posva/vim-vue'
 " Useful mappings
 Plugin 'tpope/vim-unimpaired'
-" Call external linters
-Plugin 'w0rp/ale'
-" Pug syntax
-Plugin 'digitaltoad/vim-pug'
-" ES6 syntax
-Plugin 'isRuslan/vim-es6'
 " Save vim sessions
 Plugin 'tpope/vim-obsession'
 " Faster fuzzy file finder - requires vim with python
@@ -126,13 +111,7 @@ hi link EasyMotionShade  Comment
 " Make NERDCommenter add a space after a comment character
 let g:NERDSpaceDelims = 1
 
-" Ale configuration
-let g:ale_linters = {
-\   'javascript': ['eslint'],
-\   'ruby': ['rubocop'],
-\}
 let g:airline#extensions#ale#enabled = 1
-let g:ale_lint_on_text_changed = 'never'
 
 " Ctrlp
 let g:ctrlp_custom_ignore = 'node_modules\|client/node_modules\|.git'
@@ -175,8 +154,3 @@ nnoremap <leader><space> :noh<CR>
 noremap <F7> mzgg=G`z
 " Open a tree navigator of current dir
 noremap <C-n> :NERDTreeToggle<CR>
-
-" Turbux configuration
-let g:turbux_command_prefix = 'bundle exec'
-nnoremap <leader>a :call VimuxRunCommand("bundle exec rspec")<CR>
-
